@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="title">
+            <h1>Wordle but its score based</h1>
+        </div>
+        <hr>
+        <div class="card" id="app">
+            <h2 style="text-align: center;">Guess the word</h2>
+            <div class="game">
+                <div>
+                    <input type="text" id="input" maxlength="5" placeholder="Enter word here" o >
+                    <button onclick="check()">Check</button>
+                    <p id="status"></p>
+                </div>
+                <div>
+                    <h3>Words attempted</h3>
+                    <div id="words">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2 style="text-align: center;">How it works</h2>
+            <p style="padding:10px;">There are 3563 words in this wordle. You must guess the right word with the percentage of how close it is to the right letter. The words you attempted will show up in the list called words attempted. The two numbers on the right of the percentage are the letters in right place - letters in word e.g HAPPY 30& 1-1. A letter in the right place adds 20% a letter in the wrong place adds 10%</p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" async await></script>
+        <script src="game.js" async defer></script>
+    </body>
+</html>

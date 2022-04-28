@@ -1,0 +1,108 @@
+:root {
+    --bg-secondary: #f8f8f8;
+}
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title h1{
+    text-align: center;
+}
+.card{
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(172, 172, 172);
+}
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media screen and (max-width: 800px){
+    .title h1{
+        font-size: 25px;
+    }
+    .card{
+        width: 90%;
+    }
+    .game{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+input {
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-secondary);
+    box-shadow: 0px 0px 10px rgb(172, 172, 172);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: large;
+}
+
+input:focus{
+    outline: none;
+    animation: button_fade_in 0.5s;
+    animation-fill-mode: forwards;
+}
+
+button{
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-secondary);
+    box-shadow: 0px 0px 10px rgb(172, 172, 172);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: large;
+}
+button:hover{
+    animation: button_fade_in 0.5s;
+    animation-fill-mode: forwards;
+    
+}
+button:not(:hover){
+    animation: button_fade_out 1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes button_fade_in {
+    from {
+        background-color: var(--bg-secondary);
+    }
+    to {
+        background-color: #87a9f1;
+    }
+}
+@keyframes button_fade_out {
+    from {
+        background-color: #87a9f1;
+    }
+    to {
+        background-color: var(--bg-secondary);
+    }
+}
+@keyframes error {
+    0% {
+        background-color: #87a9f1;
+        font-size: large;
+    }
+    50% {
+        background-color: #f18a87;
+        font-size: x-large;
+
+    }
+    100% {
+        background-color: #87a9f1;
+        font-size: large;
+    }
+}
